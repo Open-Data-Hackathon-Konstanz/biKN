@@ -1,4 +1,6 @@
-This file was exported from http://overpass-turbo.eu/ with the command:
+// This file was exported from http://overpass-turbo.eu/ with the command:
+// It does not (!) incule all cycling paths (for example no cycling ways
+// which are simply made with color on the street)
 
 /*
 This shows the cycleway and cycleroute network.
