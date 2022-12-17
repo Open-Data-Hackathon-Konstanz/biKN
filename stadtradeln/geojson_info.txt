@@ -1,0 +1,23 @@
+This file was exported from http://overpass-turbo.eu/ with the command:
+
+/*
+This shows the cycleway and cycleroute network.
+*/
+
+[out:json];
+
+(
+  // get cycle route relations
+  relation[route=bicycle]({{bbox}});
+  // get cycleways
+  way[highway=cycleway]({{bbox}});
+  way[highway=path][bicycle=designated]({{bbox}});
+  // query part for: “bicycle_road=yes”
+  node["bicycle_road"="yes"]({{bbox}});
+  way["bicycle_road"="yes"]({{bbox}});
+  relation["bicycle_road"="yes"]({{bbox}});
+);
+
+out body;
+>;
+out skel qt;
